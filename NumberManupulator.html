@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
+    <!-- 1. Add space between input values;
+    2. Create new brnch for development; -->
     <head>
         <link rel="stylesheet" href="NumberManupulator.css">
         <script src="NumberManupulator.js"></script>
     </head>
 
     <body>
-        <input id="inputId" type="text" oninput="orderNumbers()">
-        <div onclick="test()">test</div>
-        <h1>"the value for number is: " <span id="orderedQuquenceId"></span></h1>
+        <table>
+            <tr>
+                <td>
+                    <input id="inputId" type="text" oninput="orderNumbers()">
+                </td>
+                <td>
+                    <h3>
+                        The value for number is: <span id="orderedQuquenceId"></span>
+                    </h3>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
