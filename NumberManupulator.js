@@ -14,5 +14,15 @@ function orderNumbers() {
         return a - b;
     });
 
-    document.getElementById("orderedQuquenceId").innerHTML = numbersToSort;
+    document.getElementById("orderedQuquenceId").innerHTML = null;
+
+    numbersToSort.forEach((item, index) => {
+        let elementToAdd;
+        if(index > 0) {
+            elementToAdd = ', ' + item;
+        } else {
+            elementToAdd = item;
+        }
+        document.getElementById("orderedQuquenceId").innerHTML += elementToAdd;
+    });
 }
