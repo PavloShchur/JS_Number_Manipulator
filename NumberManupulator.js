@@ -1,3 +1,5 @@
+var output;
+
 function orderNumbers() {
     let entryNumbers = document.getElementById("inputId").value.split(" ");
 
@@ -15,14 +17,22 @@ function orderNumbers() {
     });
 
     document.getElementById("orderedQuquenceId").innerHTML = null;
+    output = '';
 
     numbersToSort.forEach((item, index) => {
         let elementToAdd;
-        if(index > 0) {
-            elementToAdd = ', ' + item;
-        } else {
-            elementToAdd = item;
+        if(item) {
+            if(index > 0) {
+                elementToAdd = ', ' + item;
+            } else {
+                elementToAdd = item;
+            }
+            output += elementToAdd;
         }
-        document.getElementById("orderedQuquenceId").innerHTML += elementToAdd;
     });
+}
+
+function calculate() {
+    console.log("@@@ PAVLO output: " + output);
+    document.getElementById("orderedQuquenceId").innerHTML = output;
 }
