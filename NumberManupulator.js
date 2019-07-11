@@ -33,6 +33,5 @@ function orderNumbers() {
 }
 
 function calculate() {
-    console.log("@@@ PAVLO output: " + output);
     document.getElementById("orderedQuquenceId").innerHTML = output;
 }
